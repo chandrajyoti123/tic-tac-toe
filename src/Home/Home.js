@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 
+
 export default function Home() {
     const [player,setPlayer]=useState(1)
     const [board, setBoard]=useState({
@@ -95,14 +96,14 @@ export default function Home() {
         })
     }
   return (
-    <div>
+    <div className='main-container'>
         <h1 className='heading'>tic tac toe</h1>
         <div className='players'>
-            <div>player one🦁</div>
-            <div>player two🐵</div>
+            <div className='players'>player one🦁</div>
+            <div className='players'>player two🐵</div>
 
         </div>
-        <div>
+        <div className='winner'>
             {
                 winner != ""?(<h1>player {player==1? "🐵": "🦁"} win</h1>):null
 
@@ -110,35 +111,35 @@ export default function Home() {
         </div>
         <div className='baord'>
             <div className='row'>
-                <div className='box' onClick={()=>{
+                <div className='box box1' onClick={()=>{
                     play(1)
                 }}>{board[1]}</div>
-                <div className='box'onClick={()=>{
+                <div className='box box2'onClick={()=>{
                     play(2)
                 }}>{board[2]}</div>
-                <div className='box' onClick={()=>{
+                <div className='box box3' onClick={()=>{
                     play(3)
                 }}>{board[3]}</div>
             </div>
             <div className='row'>
-                <div className='box' onClick={()=>{
+                <div className='box box4' onClick={()=>{
                     play(4)
                 }}>{board[4]}</div>
-                <div className='box' onClick={()=>{
+                <div className='box box5' onClick={()=>{
                     play(5)
                 }}>{board[5]}</div>
-                <div className='box' onClick={()=>{
+                <div className='box box6' onClick={()=>{
                     play(6)
                 }}>{board[6]}</div>
             </div>
             <div className='row'>
-                <div className='box' onClick={()=>{
+                <div className='box box7' onClick={()=>{
                     play(7)
                 }}>{board[7]}</div>
-                <div className='box' onClick={()=>{
+                <div className='box box8' onClick={()=>{
                     play(8)
                 }}>{board[8]}</div>
-                <div className='box' onClick={()=>{
+                <div className='box box9' onClick={()=>{
                     play(9)
                 }}>{board[9]}</div>
             </div>
